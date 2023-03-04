@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #DADADA;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.RegisterMenu">
+   <left>
+      <AnchorPane prefHeight="500.0" prefWidth="307.0" style="-fx-background-color: #46474A;" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="71.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Social" textAlignment="CENTER" wrappingWidth="135.94985961914062">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Text>
+            <Text layoutX="87.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="simulator" textAlignment="CENTER" wrappingWidth="102.7396240234375">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="72.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Media" textAlignment="CENTER">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Text>
+            <Line endX="81.66668701171875" layoutX="138.0" layoutY="258.0" startX="-85.0" strokeWidth="3.0" />
+            <Circle fill="#e6e8eb00" layoutX="139.0" layoutY="221.0" radius="100.0" stroke="BLACK" strokeType="OUTSIDE" />
+            <Circle fill="WHITE" layoutX="51.0" layoutY="182.0" radius="17.0" strokeType="INSIDE">
+               <stroke>
+                  <RadialGradient centerX="0.32592591179741753" centerY="0.06507935296921508" radius="0.5">
+                     <stops>
+                        <Stop color="WHITE" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </stroke>
+            </Circle>
+            <Text fill="WHITE" layoutX="26.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright (c). All Rights Reserved" textAlignment="CENTER" wrappingWidth="225.72979736328125" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane fx:id="bg" prefHeight="500.0" prefWidth="431.0" style="-fx-background-color: #636566;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="WHITE" layoutX="158.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="signIn">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Text>
+            <Text layoutX="55.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="if you  already have an account login " />
+            <Button fx:id="loginButton" layoutX="250.0" layoutY="314.0" mnemonicParsing="false" onAction="#logInMenu" style="-fx-background-color: #636566;" text="login" />
+            <Button layoutX="54.0" layoutY="347.0" mnemonicParsing="false" onAction="#nextSignInWithEmail" prefHeight="35.0" prefWidth="296.0" style="-fx-background-color: #46474A;" text="next" textFill="WHITE" />
+            <Button fx:id="cancelButton" layoutX="54.0" layoutY="442.0" mnemonicParsing="false" onAction="#cancel" prefHeight="35.0" prefWidth="296.0" style="-fx-background-color: #46474A;" text="Cancel" textFill="WHITE" />
+            <Button layoutX="54.0" layoutY="394.0" mnemonicParsing="false" onAction="#backScene2" prefHeight="35.0" prefWidth="296.0" style="-fx-background-color: #46474A;" text="back" textFill="WHITE" />
+            <VBox layoutX="55.0" layoutY="113.0" prefHeight="78.0" prefWidth="295.0">
+               <children>
+                  <Label text="user type" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="simpleRadioButton" mnemonicParsing="false" onAction="#setType" selected="true" text="simple" />
+                  <RadioButton fx:id="businessRadioButton" mnemonicParsing="false" onAction="#setType" text="business" />
+               </children>
+            </VBox>
+            <VBox layoutX="57.0" layoutY="191.0" prefHeight="78.0" prefWidth="295.0">
+               <children>
+                  <Label text="gender" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="femaleRadioButton" mnemonicParsing="false" onAction="#setGender" selected="true" text="Female" />
+                  <RadioButton fx:id="maleRadioButton" mnemonicParsing="false" onAction="#setGender" text="Male" />
+               </children>
+            </VBox>
+            <Button layoutX="57.0" layoutY="269.0" mnemonicParsing="false" onAction="#setProfilePicture" prefHeight="25.0" prefWidth="136.0" style="-fx-background-color: #636566" text="set Profile picture" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

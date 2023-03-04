@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #DADADA;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.GroupView">
+   <top>
+      <AnchorPane prefHeight="41.0" prefWidth="700.0" style="-fx-background-color: #46474A;" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <HBox prefHeight="460.0" prefWidth="681.0" style="-fx-background-color: #636566;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="bg" prefHeight="459.0" prefWidth="99.0" style="-fx-background-color: #46474A; -fx-background-radius: 5px;">
+               <children>
+                  <Button fx:id="timeLineButton" layoutX="16.0" layoutY="92.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="53.0" style="-fx-background-color: #46474A;">
+                     <graphic>
+                        <ImageView fx:id="timeLineImageView" fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <image>
+                              <Image url="@../../../../assets/icons8-multiple-messages-24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="exploreButton" layoutX="16.0" layoutY="143.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="53.0" style="-fx-background-color: #46474A;">
+                     <graphic>
+                        <ImageView fx:id="exploreImageView" fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../assets/icons8-find-and-replace-24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="directButton" layoutX="16.0" layoutY="196.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="53.0" style="-fx-background-color: #46474A;">
+                     <graphic>
+                        <ImageView fx:id="directImageView" fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../assets/icons8-comments-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="groupButton" layoutX="16.0" layoutY="242.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="53.0" style="-fx-background-color: #46474A;">
+                     <graphic>
+                        <ImageView fx:id="groupImageView" fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../assets/icons8-people-24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="16.0" layoutY="291.0" mnemonicParsing="false" onAction="#groupSettingMenu" prefHeight="36.0" prefWidth="53.0" style="-fx-background-color: #46474A;">
+                     <graphic>
+                        <ImageView fx:id="groupSettingImageView" fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../assets/icons8-add-user-group-man-man-24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="profileButton" layoutX="16.0" layoutY="344.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="53.0" style="-fx-background-color: #46474A;">
+                     <graphic>
+                        <ImageView fx:id="profileImageView" fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../assets/icons8-person-24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="settingButton" layoutX="16.0" layoutY="396.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="53.0" style="-fx-background-color: #46474A;">
+                     <graphic>
+                        <ImageView fx:id="groupSetImageView" fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../assets/icons8-installing-updates-24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Circle fx:id="profileImage" fill="#666a6e" layoutX="40.0" layoutY="46.0" radius="32.0" stroke="#6b706a" strokeType="INSIDE" />
+               </children>
+            </AnchorPane>
+            <VBox fx:id="userVBox" fillWidth="false" prefHeight="459.0" prefWidth="211.0">
+               <children>
+                  <HBox prefHeight="21.0" prefWidth="232.0">
+                     <children>
+                        <ImageView fx:id="searchImageview" fitHeight="38.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../assets/icons8-search-50.png" />
+                           </image>
+                        </ImageView>
+                        <TextField prefHeight="26.0" prefWidth="232.0" promptText="srearch" style="-fx-background-radius: 100px; -fx-background-color: #46474A;">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <ScrollBar orientation="VERTICAL" prefHeight="459.0" prefWidth="0.0" />
+            <AnchorPane prefHeight="459.0" prefWidth="372.0">
+               <children>
+                  <AnchorPane layoutX="-1.0" prefHeight="36.0" prefWidth="383.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="3.0" textFill="#d7d3d3">
+                           <font>
+                              <Font name="Arial" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="93.0" layoutY="6.0" text="Online" />
+                        <Circle fill="#1fff44" layoutX="89.0" layoutY="15.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Button layoutX="306.0" layoutY="6.0" mnemonicParsing="false" onAction="#setting" prefHeight="25.0" prefWidth="29.0">
+                           <graphic>
+                              <ImageView fx:id="settingImageView" fitHeight="16.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="-3.0" layoutY="414.0" prefHeight="45.0" prefWidth="384.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <Button layoutY="2.0" mnemonicParsing="false" onAction="#sentVideo" prefHeight="39.0" prefWidth="31.0" style="-fx-background-color: #FFFFFF;">
+                           <graphic>
+                              <ImageView fx:id="imoJImageView" fitHeight="31.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../assets/icons8-lol-24.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TextField fx:id="messageTextBox" layoutX="83.0" layoutY="7.0" prefHeight="32.0" prefWidth="243.0" promptText="type something to send..." />
+                        <Button layoutX="40.0" layoutY="2.0" mnemonicParsing="false" onAction="#openFileChooser" prefHeight="39.0" prefWidth="31.0" style="-fx-background-color: #FFFFFF;">
+                           <graphic>
+                              <ImageView fx:id="attachImageView" fitHeight="31.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../assets/icons8-attach-50.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="sendTextMessage" layoutX="334.0" layoutY="2.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="31.0" style="-fx-background-color: #FFFFFF;">
+                           <graphic>
+                              <ImageView fx:id="sendImageView" fitHeight="31.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../assets/icons8-sent-24.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="sendTextMessage1" layoutX="344.0" layoutY="12.0" mnemonicParsing="false" onAction="#sendTextMessage" prefHeight="27.0" prefWidth="31.0" style="-fx-background-color: #FFFFFF;" />
+                        <ImageView fx:id="sendImageView1" fitHeight="31.0" fitWidth="24.0" layoutX="348.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../assets/icons8-sent-24.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <ScrollPane layoutX="-2.0" layoutY="36.0" prefHeight="380.0" prefWidth="384.0">
+                     <content>
+                        <VBox fx:id="messagesVBox" prefHeight="363.0" prefWidth="370.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
